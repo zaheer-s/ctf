@@ -1,0 +1,27 @@
+wfuzz -c -w -d "password=FUZZ" -u "http://IP_ADDRESS" --hh 474 -t 42
+-c Output text with colors nice feature.
+-w wordlist
+-d Post-Data request
+-u url
+--hh hide response chars length
+-t threads 
+####################################
+wfuzz -c -b 'PHPSESSID=RepLAceME' -w '/the dictionary' -d 'http://Subscribe/to/ippsec.php?FUZZ=/etc/passwd'
+-d post-data
+--hh hide responses with a n(1,2,4,22) character length
+-b Cookie or the php session id
+-w Dictionary WordList what have you https://github.com/danielmiessler/SecLists
+by defaul the last part is always the url or target you can uses the -u url
+-H header FUZZ.hackthebox.htb used to enumerate subdomains /Seclist/Discovery/DNS/subdomains-top1mil-5000.txt
+#######################
+SUBDOMAIN FUZZING
+wfuzz -c -f sub-fighter -w /wordlist/seclist/Deiscovery/DNS/subdomains-top1mil-5000.txt -u "http://chaos.htb" -H "Host: FUZZ.chaos.htb" -t 42 --hl 1
+-H this is important for fuzzing the sub-domain 
+-f save output to file.
+########################
+wfuzz -c -b 'PHPSESSID=RepLAceME' -w '/the dictionary' -u 'http://Subscribe/to/ippsec.php?action=FUZZ'
+this method different than the above. this uses get request or a stanard request. -d is for post.for this one action is replaceable with any php action info file action. 
+-c add colour 
+-b session id you might need it
+-w word dictionary
+-u url
