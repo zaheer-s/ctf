@@ -1,0 +1,30 @@
+#!/bin/bash #First line 
+
+/* IF */
+if [ "$var" -eq 0 ] 
+Or
+if [ $var == *"me"* ] #Does var contain word me
+then
+echo Match
+else
+echo No Match
+fi
+
+/* For */
+for var in $(cat list.txt)
+do
+echo Print one line at at time, current line is $var
+done
+
+/* For each */
+$myarray = array('first','second','third');
+foreach($myarray as $foreachvar)
+echo $foreachvar
+
+/* Save output of a command as variable */
+var=$(date)
+
+/* Other */
+$0 #Excuting file name
+$1 #Read first argument - Example myscript.sh mycode
+$2 #Second argument

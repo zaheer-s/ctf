@@ -1,0 +1,1 @@
+-so /dev/null http://example.com -w '%{size_download}' #Get size without downloading

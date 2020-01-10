@@ -1,0 +1,2 @@
+-w 0 #Don't wrap
+echo -n 'my text to be encoded' | base64 #To remove new line character from base64

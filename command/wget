@@ -1,0 +1,2 @@
+-r #download recursively 
+-O name.txt #To name downloaded file

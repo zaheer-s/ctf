@@ -1,2 +1,3 @@
 -v #Negative
 -m 1 # Show first match
+-P '(?<=from).*(?=to) # Selects from to example : they from this to : output 'this'
